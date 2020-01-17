@@ -26,7 +26,7 @@ let faveColors = ['Green', 'Blue', 'Purple']
 let me = {
     firstName: 'Nate',
     superHeroName: 'Captain Mediocre',
-    homeTown: 'Chicago',
+    homeTown: 'Metropolis',
     superPowers: ['Day Vision', 'A glaring lack of laser beams', 'Easily startled'],
     superPowerXP: function(){
         return Math.floor(Math.random() * 100) + 1},
