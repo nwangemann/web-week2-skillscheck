@@ -26,11 +26,12 @@ let phrase = '';
 
 // Code Here
 function ode(){
-if (lovesCode === true) {
-  return phrase = "I love code";
-} else if (lovesCode === false) {
-  return phrase = "I do not love to code";
+  if (lovesCode === true) {
+   return phrase = "I love code";
+  } else if (lovesCode === false) {
+   return phrase = "I do not love to code";
+  }
 }
-}
+ode()
 //////////////////Wrap Up////////////////////
 // Refresh the index.html page in your browser. You should now see a poem that uses the variables from above.
