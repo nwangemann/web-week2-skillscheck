@@ -21,41 +21,25 @@ let lovesCode = true;
 // Create a function called 'sum' that takes in two parameters, 'num1' and 'num2'. The function should return the sum of the two parameters.
 
 //Code here
-function sum(num1, num2) {
-  return num1 + num2;
-}
+let sum = (num1, num2) => num1 + num2
 //////////////////PROBLEM 5////////////////////
 
 // Create a function called 'lovesCodeChecker' that takes in a single parameter called 'x'. Check to see if 'x' is equal to true. If it is, return a true boolean. If 'x' does not equal true, return a false boolean.
 
 //Code here
-function lovesCodeChecker(x) {
-  if (x) {
-    return true;
-  } else {
-    return false;
-  }
-}
+function lovesCodeChecker(x) {return x ? true: false}
 //////////////////PROBLEM 6////////////////////
 
 // Create a function called 'oddChecker' that takes in one parameter, 'num'. Your function should check to see if the parameter is even or odd. If the parameter is odd, return 'the number is odd'. If the number is even, return 'the number is even'.
 
 //Code here
-function oddChecker(num) {
-  if (num % 2 === 0) {
-    return "the number is even";
-  } else {
-    return "the number is odd";
-  }
-}
+function oddChecker(num) {return (num % 2 === 0) ? "the number is even" : "the number is odd";}
 //////////////////PROBLEM 7////////////////////
 
 // Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. Have the function take the two parameters and return a string that says "NAMEPARAM loves LOVEPARAM" with the appropriate parameters in the string. e.g. "Joseph loves music"
 
 //Code Here
-function iLove(name, love) {
-  return `${name} loves ${love}`;
-}
+let iLove = (name, love) => `${name} loves ${love}`
 //////////////////PROBLEM 8////////////////////
 
 // Create a copy of the faveColors array called 'colorCopy' using slice.
@@ -96,13 +80,7 @@ let me = {
 // Code here
 function bigOrSmall(arr){
 	let answers = []
-	for (let i = 0; i < arr.length; i++){
-		if (arr[i] > 100){
-			answers.push('big')
-		} else if (arr[i] <= 100){
-			answers.push('small')
-		}
-	}
+	for (let i = 0; i < arr.length; i++){(arr[i] > 100 ? answers.push('big'): answers.push('small'))}
 	return answers
 }
 //////////////////PROBLEM 13////////////////////
@@ -149,11 +127,7 @@ let total = myNumbers.reduce((acc, cur) => acc += cur)
 
 // I dunno about this one... It works but there's definitely a better solution. I'll come back to it later and refactor with a better solution. Not a fan of how I solved it. 
 let myNumbersIndex = []
-let index = 0 
-myNumbers.forEach(function(num){
-	myNumbersIndex.push(index);
-	index++;
-})
+myNumbers.forEach((num, a) => myNumbersIndex.push(a))
 //////////////////PROBLEM 18////////////////////
 
 // Did you know that George Foreman has five sons named George? Go ahead and change everyone's name in the notGeorge array to George using .map. Store the resulting array in a variable named 'forTheLoveOfGeorge'.
@@ -180,6 +154,4 @@ let enemies = people.filter(person => person.friend === false)
 // Using the people array above, get a total of the awesomeLevel from all the people, and store that value in a variable named 'totallyAwesome'. Use .reduce().
 
 // Code Here
-let totallyAwesome = people.reduce(function(acc, cur){
-	return acc += cur.awesomeLevel
-}, 0)
+let totallyAwesome = people.reduce((acc, cur) => acc += cur.awesomeLevel, 0)
